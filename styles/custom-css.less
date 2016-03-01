@@ -1,0 +1,104 @@
+
+@blue:         #d14836;
+@blue-dark:    #d14836;
+
+@list-selected-bg: #FFC;
+@btn-emphasis-bg-color: @blue;
+
+// Remove the blue dot on unread messages
+.thread-list .thread-icon.thread-icon-unread, .draft-list .thread-icon.thread-icon-unread {
+  background-image: url(../static/images/thread-list/icon-star-hover-@2x.png);
+  background-size: 16px;
+}
+.thread-list .thread-icon-star-on-hover {
+  background-image: url(../static/images/thread-list/icon-star-hover-@2x.png);
+  background-size: 16px;
+}
+// Background on thread list
+.thread-list .list-item, .draft-list .list-item  {
+  background: rgba(243,243,243,.85);
+  border-bottom: 1px solid #e5e5e5;
+  color: #222;
+}
+
+// Hover on thread list
+.list-container .list-item:not(.selected):hover {
+  background: #ececec;
+}
+.list-container .list-item:hover {
+  cursor: pointer;
+}
+
+// Thread list selected / checkmark
+.list-container .list-item.selected{
+  background: #FFC;
+  border-bottom-color: #e5e5e5;
+}
+.list-tabular .list-tabular-item.selected .checkmark .inner {
+  -webkit-filter: invert() hue-rotate(180deg);
+  background-color: #000;
+  border: 1px solid #333;
+}
+.list-container .list-item.next-is-selected {
+  border-bottom-color: #e5e5e5;
+}
+
+// Thread list timestamps
+.thread-list .timestamp, .draft-list .timestamp {
+  text-align: right;
+}
+.thread-list .list-item.unread .timestamp, .draft-list .list-item.unread .timestamp {
+  font-weight: bold;
+  opacity: 1;
+}
+
+// Account sidebar
+.account-sidebar {
+  color: #222;
+}
+
+// Selected item on sidebar
+.nylas-outline-view .item.selected {
+  font-weight: bold;
+  background: none;
+}
+
+// Sidebar hover
+.nylas-outline-view .item:hover {
+  cursor: pointer;
+}
+.nylas-outline-view .item-container:hover {
+  background: rgba(243,243,243,.85);
+}
+
+// Sidebar categories
+.nylas-outline-view .heading {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 5px;
+}
+
+// Title bar missing hover state
+.sheet-toolbar .item-back {cursor: pointer;}
+.sheet-toolbar .item-back .item-back-title {cursor: pointer;}
+.sheet-toolbar .item-back:hover img.content-mask {
+  background-color: @blue;
+}
+.sheet-toolbar .item-back:hover .item-back-title {
+  color: @blue;
+}
+
+// General button hover
+.btn, .btn-icon, .btn:hover, .btn-icon:hover, {
+  cursor: pointer;
+}
+.btn.btn-toolbar:hover img.content-mask {
+  background-color: @blue;
+}
+
+//Send button
+.btn.btn-emphasis {
+  background: @blue;
+}
+.btn.btn-emphasis:hover img.content-mask {
+  background-color: #FFF;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "N1-Gmail-Theme",
+  "displayName": "Gmail",
+  "theme": "Gmail",
+  "version": "0.1.0",
+  "description": "Gmail-inspired themefor Nylas N1",
+  "license": "GPL-3.0",
+  "engines": {
+    "nylas": "*"
+  },
+  "styleSheets": ["custom-css"],
+  "private": true
+}
